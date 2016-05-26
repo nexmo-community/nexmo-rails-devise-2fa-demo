@@ -1,1 +1,7 @@
-Hello <%= current_user.email %>!
+<div class="row">
+  <% 6.times do |i| %>
+    <div class="col-xs-4">
+      <%= image_tag "cat#{i}.jpeg", class: "img-thumbnail img-responsive" %>
+    </div>
+  <% end %>
+</div>

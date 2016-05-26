@@ -9,9 +9,11 @@
 <body>
 
   <nav class="navbar navbar-default">
-    <div class="container-fluid">
+    <div class="container">
       <div class="collapse navbar-collapse" >
+        <a class="navbar-brand" href="/">Kittens &amp; Associates</a>
         <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to current_user.email, '#' if user_signed_in? %></li>
           <li><%= link_to 'Logout', destroy_user_session_path, method: :delete if user_signed_in? %></li>
         </ul>
       </div>
@@ -20,11 +22,16 @@
 
   <div class='container'>
     <div class="row">
-      <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <div class="col-sm-12 <%= 'col-md-6 col-md-offset-3' unless user_signed_in? %>">
         <%= yield %>
       </div>
     </div>
   </div>
 
+  <footer>
+    <div class="container">
+      Images courtesy of <%= link_to 'lorempixel.com', 'https://lorempixel.com' %>
+    </div>
+  </footer>
 </body>
 </html>
