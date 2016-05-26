@@ -160,7 +160,6 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (= 3.1.0)
   byebug
-  coffee-rails (~> 4.1.0)
   devise
   devise-bootstrap-views
   jbuilder (~> 2.0)
