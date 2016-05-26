@@ -17,3 +17,6 @@ gem 'spring', group: :development
 gem 'devise'
 gem 'bootstrap-sass', '3.1.0'
 gem 'devise-bootstrap-views'
+
+gem 'nexmo' # the Nexmo gem that allows us to send SMS messages
+gem 'dotenv-rails', groups: [:development, :test] # used to load the Nexmo credentials from the environment
