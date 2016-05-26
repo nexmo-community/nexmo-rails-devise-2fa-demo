@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class KittensController < ApplicationController
   before_action :authenticate_user!
 
   def index
