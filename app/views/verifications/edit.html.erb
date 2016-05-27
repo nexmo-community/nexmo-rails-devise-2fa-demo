@@ -6,7 +6,7 @@
     <%= form_tag verification_path(id: params[:id]), method: :put do %>
       <div class="form-group">
         <%= label_tag :code %><br />
-        <%= number_field_tag :code, class: "form-control", placeholder: 'e.g. 447555555555 or 1234234234234'  %>
+        <%= number_field_tag :code, class: "form-control"  %>
       </div>
       <%= submit_tag 'Verify', class: "btn btn-primary" %>
     <% end %>
