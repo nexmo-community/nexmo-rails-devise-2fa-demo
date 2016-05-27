@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nexmo</title>
+  <title>Kittens &amp; Co.</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,7 +11,7 @@
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="collapse navbar-collapse" >
-        <a class="navbar-brand" href="/">Kittens &amp; Associates</a>
+        <a class="navbar-brand" href="/">Kittens &amp; Co.</a>
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
             <li><%= link_to current_user.email, edit_user_registration_path %></li>
