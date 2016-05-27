@@ -6,6 +6,6 @@ using Device and the Nexmo Verify API.
 ## Usage
 
 * Clone this repository
-* `bundle install`
-* `rails server`
+* Run `bundle install`
+* Run `rails server`
 * Visit http://localhost:3000/ and see the app in action
