@@ -9,16 +9,12 @@ class VerificationsController < ApplicationController
       request_id: params[:id],
       code: params[:code]
     )
+    
     if confirmation['status'] == '0'
       session[:verified] = true
       redirect_to :root
     else
       render :edit
     end
-  end
-
-  private
-
-  def confirm_verification request_id, code
   end
 end
