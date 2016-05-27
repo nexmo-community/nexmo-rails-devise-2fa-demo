@@ -24,6 +24,9 @@ The [two-factor](../../tree/two-factor) branch is the end point of out tutorial,
 adding a `before_filter` two our basic login and verifying a user's identity
 using their phone number.
 
+The differences between these two branches can be seen [here](../../compare/basic-login...two-factor)
+and in our in-dept tutorial.
+
 ### Usage
 
 * Clone this repository
@@ -33,3 +36,9 @@ using their phone number.
 * Run `rails server`
 * Visit http://localhost:3000/
 * Register and login
+
+## License
+
+This sample is released under the [MIT License][license]
+
+[license]: LICENSE.txt
