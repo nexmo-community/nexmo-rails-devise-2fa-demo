@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def verify_user!
-    start_verification unless verified?
+    start_verification if requires_verification?
   end
 
   def start_verification
@@ -20,10 +20,17 @@ class ApplicationController < ActionController::Base
       number: current_user.phone_number,
       brand: "Kittens & Co"
     )
-    redirect_to edit_verification_path(id: result['request_id'])
+    if result['status'] == '0'
+      redirect_to edit_verification_path(id: result['request_id'])
+    else
+      sign_out current_user
+      redirect_to :new_user_session, flash: {
+        error: 'Could not verify your number. Please contact support.'
+      }
+    end
   end
 
-  def verified?
-    !session[:verified].nil? && !current_user.phone_number.blank?
+  def requires_verification?
+    session[:verified].nil? && !current_user.phone_number.blank?
   end
 end
