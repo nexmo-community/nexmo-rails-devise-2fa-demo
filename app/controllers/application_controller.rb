@@ -16,7 +16,10 @@ class ApplicationController < ActionController::Base
   end
 
   def start_verification
-    result = Nexmo::Client.new.send_verification_request(number: current_user.phone_number, brand: "Kittens & Co", sender_id: 'K and Co')
+    result = Nexmo::Client.new.send_verification_request(
+      number: current_user.phone_number,
+      brand: "Kittens & Co"
+    )
     redirect_to edit_verification_path(id: result['request_id'])
   end
 
