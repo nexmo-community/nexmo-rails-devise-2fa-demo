@@ -1,0 +1,16 @@
+<div class="panel panel-default devise-bs">
+  <div class="panel-heading">
+    <h4>Verify code</h4>
+  </div>
+  <div class="panel-body">
+    <%= form_tag verification_path(id: params[:id]), method: :put do %>
+      <div class="form-group">
+        <%= label_tag :code %><br />
+        <%= number_field_tag :code, class: "form-control"  %>
+      </div>
+      <%= submit_tag 'Verify', class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'Send me a new code', :root %>
