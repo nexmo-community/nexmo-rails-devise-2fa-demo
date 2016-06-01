@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   private
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:account_update) << :phone_number
+    devise_parameter_sanitizer.permit(:account_update, keys: [:phone_number])
   end
 
   def verify_user!
@@ -18,7 +18,8 @@ class ApplicationController < ActionController::Base
   def start_verification
     result = Nexmo::Client.new.send_verification_request(
       number: current_user.phone_number,
-      brand: "Kittens and Co"
+      brand: "Kittens and Co",
+      sender_id: 'Kittens'
     )
     if result['status'] == '0'
       redirect_to edit_verification_path(id: result['request_id'])
