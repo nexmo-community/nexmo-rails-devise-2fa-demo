@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   def start_verification
     result = Nexmo::Client.new.send_verification_request(
       number: current_user.phone_number,
-      brand: "Kittens & Co"
+      brand: "Kittens and Co"
     )
     if result['status'] == '0'
       redirect_to edit_verification_path(id: result['request_id'])
