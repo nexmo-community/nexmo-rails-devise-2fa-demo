@@ -3,6 +3,8 @@
 A demo that implements 2-factor-authentication in Rails
 using Device and the [Nexmo Verify API](https://www.nexmo.com/products/verify/).
 
+Tutorial: [Two Factor Authentication (2FA) in Ruby on Rails with Devise and Nexmo Verify](https://www.nexmo.com/blog/2016/06/07/two-factor-authentication-2fa-ruby-rails-devise-nexmo-verify/)
+
 ![Kittens and Co 2FA Flow](docs/kittens.gif)
 
 ## Basic Login - basic-login branch
