@@ -5,7 +5,7 @@ class VerificationsController < ApplicationController
   end
 
   def update
-    confirmation = Nexmo::Client.new.check_verification_request(
+    confirmation = Nexmo::Client.new.verify.check(
       request_id: params[:id],
       code: params[:code]
     )
