@@ -10,11 +10,11 @@ class VerificationsController < ApplicationController
       code: params[:code]
     )
 
-    if confirmation['status'] == '0'
+    if confirmation.status == '0'
       session[:verified] = true
       redirect_to :root, flash: { success: 'Welcome back.' }
     else
-      flash[:error] = confirmation['error_text']
+      flash[:error] = confirmation.error_text
       redirect_to edit_verification_path(id: params[:id])
     end
   end

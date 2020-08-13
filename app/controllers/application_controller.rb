@@ -21,8 +21,8 @@ class ApplicationController < ActionController::Base
       brand: "Kittens and Co",
       sender_id: 'Kittens'
     )
-    if result['status'] == '0'
-      redirect_to edit_verification_path(id: result['request_id'])
+    if result.status == '0'
+      redirect_to edit_verification_path(id: result.request_id)
     else
       sign_out current_user
       redirect_to :new_user_session, flash: {
