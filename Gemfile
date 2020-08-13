@@ -10,7 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'byebug', group: [:test, :development]
-gem 'web-console', '~> 2.0', group: :development
+gem 'web-console', group: :development
 gem 'spring', group: :development
 
 # devise and bootstrap, used for the starting point of this demo
