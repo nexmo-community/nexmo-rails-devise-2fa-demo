@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # default Rails gems
-gem 'rails', '5.2'
+gem 'rails', '6.1.7.7'
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
